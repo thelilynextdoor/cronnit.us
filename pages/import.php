@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
       $_SESSION['importerror'] = "Date should be YYYY-MM-DD for row #$rowNumber not ({$post->date})";
       $this->redirect('import');
     } else if (!preg_match('#^\\d{1,2}\\:\\d{1,2}$#', $post->time)) {
-      $_SESSION['importerror'] = "Time should be hh::mm for row #$rowNumber not ({$post->time})";
+      $_SESSION['importerror'] = "Time should be hh:mm for row #$rowNumber not ({$post->time})";
       $this->redirect('import');
     }
 
